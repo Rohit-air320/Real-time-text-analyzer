@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real-Time Text Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="card">
+    <h1>Real-Time Text Analyzer</h1>
+
+    <!-- User types here; script.js sends the text to Flask -->
+    <textarea id="text-input" placeholder="Type your text here..."></textarea>
+
+    <div class="counts">
+      <div>Words: <span id="words">0</span></div>
+      <div>Characters: <span id="characters">0</span></div>
+      <div>Sentences: <span id="sentences">0</span></div>
+    </div>
+
+    <div class="result">
+      <div>Sentiment: <span id="sentiment" class="neutral">-</span></div>
+      <div>Confidence: <span id="confidence">0%</span></div>
+    </div>
+
+    <p class="footer">TF-IDF + Logistic Regression | AIML Mini Project</p>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
